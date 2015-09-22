@@ -8,12 +8,18 @@ import java.util.Map;
 import org.cloudfoundry.community.servicebroker.model.Catalog;
 import org.cloudfoundry.community.servicebroker.model.Plan;
 import org.cloudfoundry.community.servicebroker.model.ServiceDefinition;
+import org.cloudfoundry.community.servicebroker.model.BrokerApiVersion;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class CatalogConfig {
 	
+	@Bean
+	public BrokerApiVersion brokerApiVersion() {
+		return new BrokerApiVersion();
+	}
+
 	@Bean
 	public Catalog catalog() {		
 		return new Catalog( Arrays.asList(
