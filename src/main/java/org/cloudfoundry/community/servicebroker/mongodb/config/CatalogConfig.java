@@ -36,7 +36,7 @@ public class CatalogConfig {
 									getPlanMetadata())),
 					Arrays.asList("mongodb", "document"),
 					getServiceDefinitionMetadata(),
-					null,
+					Arrays.asList("syslog_drain"),
 					null)));
 	}
 	
